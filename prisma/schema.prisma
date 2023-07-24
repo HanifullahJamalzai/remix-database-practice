@@ -6,9 +6,14 @@ generator client {
 }
 
 datasource db {
-  provider = "postgres"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+// datasource db {
+//   provider = "postgres"
+//   url      = env("DATABASE_URL")
+// }
 
 model Pet {
   id String @id @default(cuid())
